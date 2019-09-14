@@ -1,7 +1,9 @@
 <template>
-    <section id="main">
+    <section id="green">
         <div class="wrapper">
-            <h1>FF</h1>
+            <div class="green">15</div>
+            <div class="yellow"></div> 
+            <div class="red"></div>
         </div>
     </section>
 </template>
