@@ -20,15 +20,15 @@ export default {
         ...mapMutations(['setDirection', 'setTimers', 'decrement']),
         ...mapActions(['setLocation']),
         lighterStart() {
-            if(this.get.redCheck) {
+            if(this.get.redCheck) {y
                 this.setTimers('red')
                 setTimeout(()=> {
                     if(document.getElementById('red')) {
                         if (this.get.redTimer > 0 ) {   
                             this.decrement('redTimer')
+                            this.setDirection('green')
                             this.lighterStart()
                         } else { 
-                            this.setDirection('green')
                             location.href = '/#/yellow'
                         }
                     }

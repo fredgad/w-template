@@ -30,9 +30,9 @@ export default {
                     if(document.querySelector('#green')) {
                         if (this.get.greenTimer > 0) {
                             this.decrement('greenTimer')
+                            this.setDirection('red')
                             this.lighterStart()
                         }else {
-                            this.setDirection('red')
                             location.href = '/#/yellow'
                         }
                     }
