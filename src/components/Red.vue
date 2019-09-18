@@ -20,7 +20,7 @@ export default {
         ...mapMutations(['setDirection', 'setTimers', 'decrement']),
         ...mapActions(['setLocation']),
         lighterStart() {
-            if(this.get.redCheck) {y
+            if(this.get.redCheck) {
                 this.setTimers('red')
                 setTimeout(()=> {
                     if(document.getElementById('red')) {
