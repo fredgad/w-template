@@ -1,8 +1,7 @@
 window.Vue = require('vue')
 import './js/common'
-import './css/main.css'
 import './scss/main.scss'
-import store from './store/index'
+import store from './store/store'
 import VueRouter from 'vue-router'
 const Green = require('./components/Green.vue').default
 const Yellow = require('./components/Yellow.vue').default
@@ -24,11 +23,9 @@ const router = new VueRouter({
 new Vue({
     router,
     store,
-    el: '#app'
+    el: '#app',
 })
 
 onload = () => {
-    setTimeout(()=> {
-        location.href = '/#/green'
-    }, 3000)
+    location.href = '/#/green'
 }

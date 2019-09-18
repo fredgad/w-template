@@ -1,6 +1,62 @@
+@keyframes blink {
+0%, 20%, 40.1%, 60%, 80.1%, 100% {
+    border: 50px solid #000;
+}
+20.1%, 40%, 60.1%, 80% {
+    border: 0px solid #000;
+}}
+
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightblue;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 400px;
+    width: 200px;
+    background: #444;
+    border: 2px solid #222;
+    border-top: 20px solid #000;
+    border-radius: 150px;
+
+    > div {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        font-size: 55px;
+        font-weight: 900;
+        font-family: Roboto, sans-serif;
+        box-sizing: border-box;
+    }
+   
+}
+.wrapper::before {
+    content: '';
+    height: 5000px;
+    width: 25px;
+    background: #444;
+    position: absolute;
+    top: 200px;
+    left: 87.5px;
+    z-index: -1;
+}
+.blink {
+    animation: blink 3s linear;
 }

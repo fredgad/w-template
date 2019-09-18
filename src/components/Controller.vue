@@ -14,13 +14,15 @@ export default {
 
 <style lang="scss" scoped>
 #controller {
+    position: absolute;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: space-evenly;
     width: 200px;
-    height: 300px;
-    position: relative;
-    top: calc(100vh - 200px);
+    height: 160px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     background: #eee;
     border: 2px solid #888;
     border-radius: 10px;
